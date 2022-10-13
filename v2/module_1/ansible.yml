@@ -20,6 +20,7 @@
         - g++
         - gcc
         - firefox
+        - meld
       state: latest
       update_cache: yes
 
