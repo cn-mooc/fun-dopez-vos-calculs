@@ -19,6 +19,7 @@
         - dnsutils
         - g++
         - gcc
+        - firefox
       state: latest
       update_cache: yes
 
