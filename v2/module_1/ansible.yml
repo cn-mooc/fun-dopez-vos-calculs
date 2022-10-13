@@ -23,6 +23,7 @@
         - meld
         - cowsay
         - lolcat
+        - automake
       state: latest
       update_cache: yes
 
