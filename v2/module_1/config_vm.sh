@@ -17,4 +17,4 @@ elif [ $DIST_CODENAME != "focal" ]; then
 fi
 apt-get update
 apt-get install $APT_OPT -y ansible
-ansible-playbook -c local -i 127.0.0.1, -b -e 'ansible_python_interpreter=/usr/bin/python3' ansible.yaml
+ansible-playbook -c local -i 127.0.0.1, -b -e 'ansible_python_interpreter=/usr/bin/python3' ansible.yml
