@@ -86,3 +86,6 @@
         - docker-compose
       executable: pip3
       state: latest
+      
+  - name: Install Valgrind
+    script: install-valgrind.sh
