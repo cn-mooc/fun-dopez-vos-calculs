@@ -17,6 +17,8 @@
         - dstat
         - nload
         - dnsutils
+        - g++
+        - gcc
       state: latest
       update_cache: yes
 
