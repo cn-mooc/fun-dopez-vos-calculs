@@ -10,7 +10,7 @@ FILE_URL="https://sourceware.org/pub/valgrind/${FILE_SRC}"
 WORK_DIR=`mktemp -d`
 
 # --- update apt db
-apt-get --purge valgrind
+apt purge valgrind
 
 # --- download source
 cd $WORK_DIR && {
