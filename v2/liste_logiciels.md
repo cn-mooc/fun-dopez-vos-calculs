@@ -28,7 +28,7 @@ sudo make install
 ## Kcachegrind
 *source: https://kcachegrind.github.io/html/Home.html*
 
-## Massif-Visualer
+## Massif-Visualizer
 *source: https://snapcraft.io/install/massif-visualizer/ubuntu*
 
 ```bash
@@ -43,4 +43,3 @@ sudo snap install massif-visualizer --edge
 ## Tau / Jumpshot
 *source: https://www.cs.uoregon.edu/research/tau/home.php*
 
-- installer
