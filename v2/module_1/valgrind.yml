@@ -8,6 +8,12 @@
     valg_custom_modules: ""
 
   tasks:
+  - name: Removing Valgrind in repo
+    become: yes
+    apt:
+      name: valgrind
+      state: absent
+      
   - name: Installing Valgrind Dependencies
     become: yes
     apt:
