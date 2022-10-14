@@ -28,6 +28,12 @@ sudo make install
 ## Kcachegrind
 *source: https://kcachegrind.github.io/html/Home.html*
 
+- à partir de la version 0.7.x `KCachegrind` est disponible dans les packages avec la distribution [KDE 4.x](https://kde.org)
+- téléchargez le code source ici >> https://kcachegrind.github.io/html/Download.html et décompressez le fichier tar.gz
+- lisez les fichiers INSTALL et README, notamment sur comment installer KDE 
+  - https://techbase.kde.org/Getting_Started/Build/KDE4
+  - https://techbase.kde.org/Getting_Started/Build
+
 ## Massif-Visualizer
 *source: https://snapcraft.io/install/massif-visualizer/ubuntu*
 
