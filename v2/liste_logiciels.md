@@ -81,3 +81,9 @@ L'installation de cet outil étant complexe et fastidieuse, il est préférable 
 ./configure -bfd=download -dwarf=download -unwind=download -iowrapper
 make && sudo make install
 ```
+
+- validate tau installation
+
+```bash
+./tau_validate --run x86_64
+```
