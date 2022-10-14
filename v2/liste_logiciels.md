@@ -14,7 +14,7 @@ autofs pythonpip jq python3 pythondev git curl wget pythonvenv lsrelease dstat n
 ## Valgrind
 *source: https://valgrind.org*
 
-Installation par compilation à partir du code source.
+### Installation par compilation à partir du code source.
 
 ```bash
 git clone https://sourceware.org/git/valgrind.git && \
@@ -29,6 +29,11 @@ Sinon vous pouvez exécuter le script fourni par notre équipe dans le répertoi
 ```bash
 # version par défaut 3.19.0
 sudo bash ./install-valgrind.sh <numero de version>
+```
+
+Pour tester si l'installation s'est bien passée, affichez le numéro de version
+```bash
+valgrind --version
 ```
 
 
