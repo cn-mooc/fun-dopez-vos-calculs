@@ -1,4 +1,5 @@
 # Liste des logiciles à installer/installées dans la machine virtuelle
+*Tous les logiciels listés ici ont été testés et validés pour fonctionner sous l'OS Linux Ubuntu >20.04*
 
 ## Dépendances
 Nous listons ici que les binaires paquets APT pour un OS Linux Ubuntu.
@@ -9,14 +10,22 @@ autofs pythonpip jq python3 pythondev git curl wget pythonvenv lsrelease dstat n
 ```
 
 ## Valgrind
-*source: https://valgrind.org/downloads/repository.html*
 
-Installation
+Installation par compilation depuis la *source: https://valgrind.org/downloads/repository.html*
 
 ```bash
 git clone https://sourceware.org/git/valgrind.git && \
 cd valgrind && \
 ./autogen.sh && \
-./configure && \
-make && make install
+./configure --prefix=/usr/bin/ && \
+make && \
+sudo make install
+```
+## Massif-Visualer
+*source: https://snapcraft.io/install/massif-visualizer/ubuntu*
+
+```bash
+sudo apt update
+sudo apt install snapd
+sudo snap install massif-visualizer --edge
 ```
