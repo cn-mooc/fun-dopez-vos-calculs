@@ -1,6 +1,7 @@
 - hosts: all
   vars:
     valgrind_version: 3.19.0
+    openmpi_version: 4.1.4
     
   tasks:
   - name: Install requirements
@@ -115,3 +116,16 @@
     become: yes
     command: snap install massif-visualizer --edge
     when: masviz_installed.rc != 0
+
+  - name: Check if openmpi is installed
+    shell: hash mpirun
+    register: openmpi_installed
+    ignore_errors: True
+    check_mode: False
+    changed_when: False
+      
+  - name: Install and Configure openmpi {{ openmpi_version }}
+    command: install-openmpi.sh {{ openmpi_version }}
+    register: openmpi_compiled
+    when: openmpi_installed.rc != 0
+
