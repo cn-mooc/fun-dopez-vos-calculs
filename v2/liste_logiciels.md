@@ -9,10 +9,10 @@ Nous listons ici que les binaires paquets APT pour un OS Linux Ubuntu.
 autofs pythonpip jq python3 pythondev git curl wget pythonvenv lsrelease dstat nload dnsutils g++ gcc firefox meld cmake automake cowsay lolcat
 ```
 
-## OpenMPI
+## OpenMPI - version 4.1.4
 *source: https://www.open-mpi.org/*
 
-
+- téléchargez le code source >> https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.4.tar.gz
 
 ## Valgrind - version 3.19.0
 *source: https://valgrind.org*
