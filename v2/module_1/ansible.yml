@@ -104,6 +104,14 @@
     register: valgrind_compiled
     when: valgrind_installed.rc != 0
     
+  - name: Check if massif-visualizer is installed
+    shell: hash massif-visualizer
+    register: masviz_installed
+    ignore_errors: True
+    check_mode: False
+    changed_when: False
+    
   - name: Install Massif Visualizer
     become: yes
     command: snap install massif-visualizer --edge
+    when: masviz_installed.rc != 0
