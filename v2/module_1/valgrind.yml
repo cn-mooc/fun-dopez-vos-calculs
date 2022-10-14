@@ -4,7 +4,8 @@
   vars:
     work_dir: ".installation"
     valg_version: valgrind-3.19.0
-    valg_tarball_url: "https://sourceware.org/pub/valgrind/{{ valg_version }}.tar.bz2"
+    valg_tarball_file: "{{ valg_version }}.tar.bz2"
+    valg_tarball_url: "https://sourceware.org/pub/valgrind/{{ valg_tarball_file }}"
     valg_install_dir: "{{ work_dir }}/{{ valg_version }}"
     valg_custom_modules: "--prefix={{ work_dir }}/bin"
 
@@ -33,14 +34,14 @@
   - name: Downloading Valgrind Source
     get_url:
       url: "{{ valg_tarball_url }}"
-      dest: "{{ valg_install_dir }}.tar.bz2"
+      dest: "{{ work_dir }}/{{ valg_tarball_file }}"
     register: valg_source
 
   - name: Unpacking Valgrind
-    shell: "bzip2 -d -c {{ valg_source.dest }} | tar xvf -"
+    shell: "bzip2 -d -c {{ valg_tarball_file }} | tar xvf -"
     args:
       chdir: "{{ work_dir }}"
-    when: valg_source.changed or vars.valg_install_dir.absent
+    when: valg_source.changed
     register: valg_source_unpack
 
   - name: Configuring Valgrind
