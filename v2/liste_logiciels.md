@@ -13,6 +13,7 @@ autofs pythonpip jq python3 pythondev git curl wget pythonvenv lsrelease dstat n
 *source: https://www.open-mpi.org/*
 
 - téléchargez le code source >> https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.4.tar.gz
+- lisez les notes sur [cette version](https://github.com/open-mpi/ompi/blob/v4.1.x/contrib/dist/linux/README)
 
 ## Valgrind - version 3.19.0
 *source: https://valgrind.org*
