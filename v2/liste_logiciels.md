@@ -58,8 +58,14 @@ sudo snap install massif-visualizer --edge
 ## Scalasca / Blade
 *source: https://www.scalasca.org/scalasca/software/scalasca-2.x/download.html*
 
-L'installation de cet outil étant complexe et fastidieuse, il n'a pas été mis 
+L'installation de cet outil étant complexe et fastidieuse, il est préférable de suivre pas-à-pas les instructions de l'éditeur:
+- https://www.scalasca.org/scalasca/software/scalasca-2.x/requirements.html
+- **attention** il y a beaucoup de libraires à installer auparavant.
+  - 
 
 ## Tau / Jumpshot
 *source: https://www.cs.uoregon.edu/research/tau/home.php*
 
+- suivre les instructions d'installation >> https://www.cs.uoregon.edu/research/tau/downloads.php
+- **attention** il faudra télécharger la source compressée http://tau.uoregon.edu/tau.tgz qui fait 70M!
+- 
