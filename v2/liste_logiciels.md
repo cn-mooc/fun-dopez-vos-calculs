@@ -10,8 +10,9 @@ autofs pythonpip jq python3 pythondev git curl wget pythonvenv lsrelease dstat n
 ```
 
 ## Valgrind
+*source: https://valgrind.org*
 
-Installation par compilation depuis la *source: https://valgrind.org/downloads/repository.html*
+Installation par compilation à partir du code source.
 
 ```bash
 git clone https://sourceware.org/git/valgrind.git && \
@@ -21,6 +22,11 @@ cd valgrind && \
 make && \
 sudo make install
 ```
+
+## Kcachegrind
+*source: https://kcachegrind.github.io/html/Home.html*
+
+
 ## Massif-Visualer
 *source: https://snapcraft.io/install/massif-visualizer/ubuntu*
 
