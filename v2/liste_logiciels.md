@@ -1,5 +1,5 @@
-# Liste des logiciles à installer/installées dans la machine virtuelle
-*Tous les logiciels listés ici ont été testés et validés pour fonctionner sous l'OS Linux Ubuntu >20.04*
+# Liste des logiciles à installer/installées dans une machine virtuelle Linux
+*Tous les logiciels listés ici ont été testés et validés pour fonctionner sous l'OS Ubuntu >20.04*
 
 ## Dépendances
 Nous listons ici que les binaires paquets APT pour un OS Linux Ubuntu.
@@ -41,3 +41,6 @@ sudo snap install massif-visualizer --edge
 *source: https://www.scalasca.org/scalasca/software/scalasca-2.x/download.html*
 
 ## Tau / Jumpshot
+*source: https://www.cs.uoregon.edu/research/tau/home.php*
+
+- installer
