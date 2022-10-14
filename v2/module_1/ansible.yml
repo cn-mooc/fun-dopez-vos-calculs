@@ -92,9 +92,17 @@
       executable: pip3
       state: latest
       
+  - name: Check if valgrind is installed
+    shell: hash valgrind
+    register: valgrind_installed
+    ignore_errors: True
+    check_mode: False
+    changed_when: False
+      
   - name: Install and Configure Valgrind {{ valgrind_version }}
     command: install-valgrind.sh {{ valgrind_version }}
-    register: valgrind_installed
+    register: valgrind_compiled
+    when: valgrind_installed.rc != 0
     
   - name: Install Massif Visualizer
     become: yes
