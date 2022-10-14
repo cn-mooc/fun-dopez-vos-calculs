@@ -1,6 +1,6 @@
 #!/bin/bash
 # Copyright - Centrale Nantes
-# Version 1.0 @ Thu Oct 13 18:19:11 CEST 2022
+# Version 1.0 @ Fri Oct 14 19:24:50 UTC 2022
 #
 set -x
 
