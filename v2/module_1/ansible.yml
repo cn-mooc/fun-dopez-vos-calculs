@@ -26,6 +26,7 @@
         - cowsay
         - lolcat
         - automake
+        - cmake
       state: latest
       update_cache: yes
 
