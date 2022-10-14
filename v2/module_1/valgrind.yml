@@ -36,7 +36,7 @@
  - name: Configuring Valgrind
     command: "./autogen.sh && ./configure {{ nginx_custom_modules }}"
     args:
-      chdir: "{{ nginx_install_dir }}"
+      chdir: "{{ valg_install_dir }}"
     when: valg_source_unpack.changed
     register: valg_configure
 
