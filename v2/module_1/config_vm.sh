@@ -55,3 +55,4 @@ else
             ansible-playbook -c local -i 127.0.0.1, -b -e 'ansible_python_interpreter=/usr/bin/python3' ansible.yml
         fi
     }
+fi
