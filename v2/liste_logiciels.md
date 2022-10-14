@@ -75,3 +75,9 @@ L'installation de cet outil étant complexe et fastidieuse, il est préférable 
 - suivre les instructions d'installation >> https://www.cs.uoregon.edu/research/tau/downloads.php
 - **attention** il faudra télécharger la source compressée http://tau.uoregon.edu/tau.tgz qui fait 70M! Décompressez le fichier .tgz
 - lisez le fichier INSTALL avant de commencer
+- commencez par ces étapes
+
+```bash
+./configure -bfd=download -dwarf=download -unwind=download -iowrapper
+make && sudo make install
+```
