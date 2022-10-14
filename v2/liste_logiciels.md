@@ -3,8 +3,7 @@
 
 ## Dépendances
 Nous listons ici que les binaires paquets APT pour un OS Linux Ubuntu.
-
-*Copiez la liste ci-dessous en une ligne et collez-la à la commande d'installateur de paquets APT* comme suit `apt install <liste>`
+Copiez et exécutez la commande qui suit pour installer les dépendances recommandées.
 ```bash
 sudo apt install binutils \
   autofs pythonpip jq python3 pythondev git curl \
@@ -17,6 +16,19 @@ sudo apt install binutils \
 
 - téléchargez le code source >> https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.4.tar.gz
 - lisez les notes sur [cette version](https://github.com/open-mpi/ompi/blob/v4.1.x/contrib/dist/linux/README)
+- soit vous compilez 
+
+```bash
+wget -c https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.4.tar.gz && tar zxf openmpi-4.1.4.tar.gz \
+cd openmpi-4.1.4 && \
+  ./configure --prefix=/usr/local/ && \
+  make && sudo make install
+```
+
+ou installez avec APT les binaires
+```bash
+sudo apt install openmpi-bin openmpi-common
+```
 
 ## Valgrind - version 3.19.0
 *source: https://valgrind.org*
