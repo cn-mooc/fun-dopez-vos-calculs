@@ -1,11 +1,24 @@
 # Liste des logiciles à installer/installées dans la machine virtuelle
 
-## Compilation
+## Dépendances
 *Nous listons ici que les binaires paquets APT pour un OS Linux Ubuntu*
 ```bash
+autofs
+curl
+dstat
+firefox
 g++
 gcc
-automake
+git
+jq
+lsrelease
+meld
+nload
+python3
+pythondev
+pythonpip
+pythonvenv
+wget
 ```
 
 ## Valgrind
