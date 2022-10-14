@@ -9,6 +9,8 @@ Nous listons ici que les binaires paquets APT pour un OS Linux Ubuntu.
 autofs pythonpip jq python3 pythondev git curl wget pythonvenv lsrelease dstat nload dnsutils g++ gcc firefox meld
 ```
 
+## OpenMPI
+
 ## Valgrind
 *source: https://valgrind.org*
 
@@ -26,7 +28,6 @@ sudo make install
 ## Kcachegrind
 *source: https://kcachegrind.github.io/html/Home.html*
 
-
 ## Massif-Visualer
 *source: https://snapcraft.io/install/massif-visualizer/ubuntu*
 
@@ -35,3 +36,8 @@ sudo apt update
 sudo apt install snapd
 sudo snap install massif-visualizer --edge
 ```
+
+## Scalasca / Blade
+*source: https://www.scalasca.org/scalasca/software/scalasca-2.x/download.html*
+
+## Tau / Jumpshot
