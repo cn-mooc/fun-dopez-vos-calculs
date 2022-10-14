@@ -15,10 +15,13 @@ if [ $(lsb_release -is) = "Debian" ]; then
 elif [ $DIST_CODENAME != "focal" ]; then
     apt-add-repository -y ppa:ansible/ansible
 fi
-apt-get update
-apt-get install $APT_OPT -y ansible
-#
-# Disable export setting if you want to debug
-#export ANSIBLE_DEBUG=true 
-#export ANSIBLE_VERBOSITY=4 
-ansible-playbook -c local -i 127.0.0.1, -b -e 'ansible_python_interpreter=/usr/bin/python3' ansible.yml
+#apt-get update
+#apt-get install $APT_OPT -y ansible
+export ANSIBLE_DEBUG=false
+export ANSIBLE_VERBOSITY=2
+git clone https://github.com/cn-mooc/fun-dopez-vos-calculs.git && \
+cd fun-dopez-vos-calculs/v2/module_1 && {
+  if [[ -f ansible.yml ]]; then
+     ansible-playbook -c local -i 127.0.0.1, -b -e 'ansible_python_interpreter=/usr/bin/python3' ansible.yml
+  fi
+}
