@@ -6,7 +6,7 @@ Nous listons ici que les binaires paquets APT pour un OS Linux Ubuntu.
 
 *Copiez la liste ci-dessous en une ligne et collez-la à la commande d'installateur de paquets APT* comme suit `apt install <liste>`
 ```bash
-autofs pythonpip jq python3 pythondev git curl wget pythonvenv lsrelease dstat nload dnsutils g++ gcc firefox meld
+autofs pythonpip jq python3 pythondev git curl wget pythonvenv lsrelease dstat nload dnsutils g++ gcc firefox meld cmake automake cowsay lolcat
 ```
 
 ## OpenMPI
@@ -24,6 +24,13 @@ cd valgrind && \
 make && \
 sudo make install
 ```
+
+Sinon vous pouvez exécuter le script fourni par notre équipe dans le répertoire de ce dépôt dans `v2/module_1`
+```bash
+# version par défaut 3.19.0
+sudo bash ./install-valgrind.sh <numero de version>
+```
+
 
 ## Kcachegrind
 *source: https://kcachegrind.github.io/html/Home.html*
@@ -45,6 +52,8 @@ sudo snap install massif-visualizer --edge
 
 ## Scalasca / Blade
 *source: https://www.scalasca.org/scalasca/software/scalasca-2.x/download.html*
+
+L'installation de cet outil étant complexe et fastidieuse, il n'a pas été mis 
 
 ## Tau / Jumpshot
 *source: https://www.cs.uoregon.edu/research/tau/home.php*
