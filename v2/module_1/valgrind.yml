@@ -37,7 +37,7 @@
     register: valg_source
 
   - name: Unpacking Valgrind
-    shell: "bzip2 -d {{ valg_source.dest }} | tar xvf -"
+    shell: "bzip2 -d -c {{ valg_source.dest }} | tar xvf -"
     args:
       chdir: "{{ work_dir }}"
     when: valg_source.changed or vars.valg_install_dir.absent
