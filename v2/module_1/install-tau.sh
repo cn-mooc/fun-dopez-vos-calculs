@@ -22,7 +22,6 @@ cd ${WORK_DIR} && {
 } || exit 1 
 
 # --- if install succeed, remove temp directory
-hash mpirun 2>/dev/null || exit 1
 echo "--- tau version installed."
 rm -rf $WORK_DIR 2>/dev/null
 exit 0
