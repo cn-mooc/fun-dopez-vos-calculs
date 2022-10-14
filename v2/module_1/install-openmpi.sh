@@ -6,7 +6,7 @@
 set -x
 
 SERIES=v4.1
-FILE_VER=4.1.4
+FILE_VER=${1:-4.1.4}
 FILE_CODE=openmpi
 FILE_SRC=${FILE_CODE}-${FILE_VER}.tar.gz
 FILE_URL="https://download.open-mpi.org/release/open-mpi/$SERIES/${FILE_SRC}"
