@@ -15,5 +15,3 @@ Vous pouvez accéder aux données vous concernant, les rectifier, demander leur 
 Pour exercer ces droits ou pour toute question sur le traitement de vos données dans ce dispositif, vous pouvez contacter (le cas échéant, notre délégué à la protection des données ou le service chargé de l’exercice de ces droits) : dpo@ec-nantes.fr
 
 Si vous estimez, après nous avoir contactés, que vos droits « Informatique et Libertés » ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL.
-Les mots clés associés à cet article
-
