@@ -10,8 +10,11 @@ autofs pythonpip jq python3 pythondev git curl wget pythonvenv lsrelease dstat n
 ```
 
 ## OpenMPI
+*source: https://www.open-mpi.org/*
 
-## Valgrind
+
+
+## Valgrind - version 3.19.0
 *source: https://valgrind.org*
 
 ### Installation par compilation à partir du code source.
@@ -37,7 +40,7 @@ valgrind --version
 ```
 
 
-## Kcachegrind
+## Kcachegrind - version 0.7.x
 *source: https://kcachegrind.github.io/html/Home.html*
 
 - à partir de la version 0.7.x `KCachegrind` est disponible dans les packages avec la distribution [KDE 4.x](https://kde.org)
@@ -55,7 +58,7 @@ sudo apt install snapd
 sudo snap install massif-visualizer --edge
 ```
 
-## Scalasca / Blade
+## Scalasca / Blade - version 2.x
 *source: https://www.scalasca.org/scalasca/software/scalasca-2.x/download.html*
 
 L'installation de cet outil étant complexe et fastidieuse, il est préférable de suivre pas-à-pas les instructions de l'éditeur:
@@ -65,9 +68,9 @@ L'installation de cet outil étant complexe et fastidieuse, il est préférable 
   - [Cube C++ library and tools](http://scalasca.org/scalasca/front_content.php?idart=1089) - *Minimum version: v4.4 	Tested up to: v4.6*
   - [Cube GUI](http://scalasca.org/scalasca/front_content.php?idart=1089) - *Minimum version: v4.4 	Tested up to: v4.6*
 
-## Tau / Jumpshot
+## Tau / Jumpshot - version 2.31.1
 *source: https://www.cs.uoregon.edu/research/tau/home.php*
 
 - suivre les instructions d'installation >> https://www.cs.uoregon.edu/research/tau/downloads.php
-- **attention** il faudra télécharger la source compressée http://tau.uoregon.edu/tau.tgz qui fait 70M!
-- 
+- **attention** il faudra télécharger la source compressée http://tau.uoregon.edu/tau.tgz qui fait 70M! Décompressez le fichier .tgz
+- lisez le fichier INSTALL avant de commencer
