@@ -1,0 +1,48 @@
+---
+- name: Compile Valgrind
+  hosts: localhost
+  vars:
+    valg_version: valgrind-3.19.0
+    valg_tarball_url: "https://sourceware.org/pub/valgrind/{{ valg_version }}.tar.bz2"
+    valg_install_dir: "/tmp/{{ valg_version }}"
+    valg_custom_modules: ""
+
+  tasks:
+  - name: Installing Valgrind Dependencies
+    become: yes
+    apt:
+      name: "{{ item }}"
+      update_cache: yes
+    with_items:
+      - automake
+      - gcc
+      - g++
+      - git
+
+  - name: Downloading Valgrind Source
+    get_url:
+      url: "{{ valg_tarball_url }}"
+      dest: "{{ valg_install_dir }}.tar.bz2"
+    register: valg_source
+
+  - name: Unpacking Valgrind
+    unarchive:
+      copy: no
+      dest: /tmp/
+      src: "{{ valg_source.dest }}"
+    when: valg_source.changed
+    register: valg_source_unpack
+
+ - name: Configuring Valgrind
+    command: "./autogen.sh && ./configure {{ nginx_custom_modules }}"
+    args:
+      chdir: "{{ nginx_install_dir }}"
+    when: valg_source_unpack.changed
+    register: valg_configure
+
+  - name: Installing Valgrind
+    become: yes
+    shell: make -j3 && make install
+    args:
+      chdir: "{{ valg_install_dir }}"
+    when: valg_configure.changed
