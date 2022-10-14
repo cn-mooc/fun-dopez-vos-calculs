@@ -103,9 +103,9 @@
     changed_when: False
       
   - name: Install and Configure Valgrind {{ valgrind_version }}
-    command: install-valgrind.sh {{ valgrind_version }}
+    command: sh install-valgrind.sh {{ valgrind_version }}
     register: valgrind_compiled
-    when: valgrind_installed.rc != 0
+    when: valgrind_installed.rc == 1
     
   - name: Check if massif-visualizer is installed
     shell: hash massif-visualizer
@@ -117,7 +117,7 @@
   - name: Install Massif Visualizer
     become: yes
     command: snap install massif-visualizer --edge
-    when: masviz_installed.rc != 0
+    when: masviz_installed.rc == 1
 
   - name: Check if openmpi is installed
     shell: hash mpirun
@@ -127,10 +127,10 @@
     changed_when: False
       
   - name: Install and Configure openmpi {{ openmpi_version }}
-    command: install-openmpi.sh {{ openmpi_version }}
+    command: sh install-openmpi.sh {{ openmpi_version }}
     register: openmpi_compiled
-    when: openmpi_installed.rc != 0
+    when: openmpi_installed.rc == 1
       
   - name: Install and Configure tau {{ tau_version }}
-    command: install-tau.sh {{ tau_version }}
+    command: sh install-tau.sh {{ tau_version }}
     register: tau_compiled
