@@ -61,7 +61,9 @@ sudo snap install massif-visualizer --edge
 L'installation de cet outil étant complexe et fastidieuse, il est préférable de suivre pas-à-pas les instructions de l'éditeur:
 - https://www.scalasca.org/scalasca/software/scalasca-2.x/requirements.html
 - **attention** il y a beaucoup de libraires à installer auparavant.
-  - 
+  - [Score-P](http://www.score-p.org/) - *Minimum version: v1.2 	Tested up to: v7.0*
+  - [Cube C++ library and tools](http://scalasca.org/scalasca/front_content.php?idart=1089) - *Minimum version: v4.4 	Tested up to: v4.6*
+  - [Cube GUI](http://scalasca.org/scalasca/front_content.php?idart=1089) - *Minimum version: v4.4 	Tested up to: v4.6*
 
 ## Tau / Jumpshot
 *source: https://www.cs.uoregon.edu/research/tau/home.php*
