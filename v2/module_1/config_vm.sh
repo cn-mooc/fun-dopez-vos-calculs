@@ -50,15 +50,12 @@ ansible_stuff(){
             return 1
         fi
         git clone https://github.com/cn-mooc/$FUN_GITDIR && \
-        cd fun-dopez-vos-calculs/v2/module_1 && {
-            if [ -f ansible.yml ]; then
-                # --- Remove the comment below if you want to run debug mode
-                #export ANSIBLE_DEBUG=true
-                export ANSIBLE_VERBOSITY=3
-                ansible-playbook -c local -i 127.0.0.1, -b -e 'ansible_python_interpreter=/usr/bin/python3' ansible.yml
-            fi
-        }
+        cd fun-dopez-vos-calculs/v2/module_1 || fatal "Not in a repo directory"
     fi
+    # --- Remove the comment below if you want to run debug mode
+    #export ANSIBLE_DEBUG=true
+    export ANSIBLE_VERBOSITY=2
+    ansible-playbook -c local -i 127.0.0.1, -b -e 'ansible_python_interpreter=/usr/bin/python3' ansible.yml
 }
 
 # === MAIN ===
