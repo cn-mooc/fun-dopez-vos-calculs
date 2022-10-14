@@ -1,7 +1,8 @@
-- import_playbook: valgrind.yml
 - hosts: all
+  vars:
+    valgrind_version: 3.19.0
+    
   tasks:
-
   - name: Install requirements
     apt:
       name: 
@@ -88,4 +89,8 @@
         - docker-compose
       executable: pip3
       state: latest
+      
+  - name: Install and Configure Valgrind {{ valgrind_version }}
+    command: install-valgrind.sh {{ valgrind_version }}
+    register: valgrind_installed
  
