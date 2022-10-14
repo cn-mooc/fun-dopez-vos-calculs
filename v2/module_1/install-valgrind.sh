@@ -10,16 +10,15 @@ FILE_URL="https://sourceware.org/pub/valgrind/${FILE_SRC}"
 WORK_DIR=`mktemp -d`
 
 # --- update apt db
-apt purge valgrind
+apt purge -q valgrind &>/dev/null
 
 # --- download source
 cd $WORK_DIR && {
     wget -q -c $FILE_URL && \ 
     bzip2 -d -c ${FILE_SRC} | tar xf -
     cd valgrind-${FILE_VER} && {
-        ./autogen.sh && \
-        ./configure && \
-        make && make install
+        ( ./autogen.sh && ./configure &>/dev/null ) &>/dev/null && \
+        ( make && make install ) &>/dev/null
     }
 } || exit 1 
 
