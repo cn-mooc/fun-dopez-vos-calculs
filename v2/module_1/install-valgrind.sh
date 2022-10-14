@@ -23,13 +23,13 @@ cd $WORK_DIR && {
     }
 } || exit 1 
 
-rm -rf $WORK_DIR 2>/dev/null
-
 # --- if install succeed, remove temp directory
 if [ -d /usr/local/include/lib/valgrind -o -d /usr/local/libexec/valgrind ]; then
-   echo "--- valgrind installed [/usr/local/bin/{include,lib,share/doc,libexec}/valgrind] ... "
+   echo "--- valgrind version $FILE_VER installed."
+   echo "--- Files installed in [/usr/local/bin/{include,lib,share/doc,libexec}/valgrind]"
+   rm -rf $WORK_DIR 2>/dev/null
    exit 0
 fi
 
-echo "*** valgrind failed during installation ... "
+echo "*** valgrind failed during installation ... try to recompile [$WORK_DIR/valgrind-${FILE_VER}] "
 exit 1
