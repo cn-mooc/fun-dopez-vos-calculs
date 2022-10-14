@@ -5,7 +5,7 @@
 #
 set -x
 
-FILE_VER=2.31.0
+FILE_VER=${1:-2.31.1}
 FILE_CODE=tau
 FILE_SRC=${FILE_CODE}.tgz
 FILE_URL="http://tau.uoregon.edu/${FILE_SRC}"
