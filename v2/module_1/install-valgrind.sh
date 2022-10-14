@@ -18,9 +18,18 @@ cd $WORK_DIR && {
     bzip2 -d -c ${FILE_SRC} | tar xf -
     cd valgrind-${FILE_VER} && {
         ./autogen.sh && \
-        ./configure --prefix=/usr/local/bin && \
+        ./configure && \
         make && make install
     }
-}
+} || exit 1 
 
 rm -rf $WORK_DIR 2>/dev/null
+
+# --- if install succeed, remove temp directory
+if [ -d /usr/local/bin/lib/valgrind ]; then
+   echo "--- valgrind installed [/usr/local/bin/{include,lib,share/doc,libexec}/valgrind] ... "
+   exit 0
+fi
+
+echo "*** valgrind failed during installation ... "
+exit 1
