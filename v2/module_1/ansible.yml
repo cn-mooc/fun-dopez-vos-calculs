@@ -2,6 +2,7 @@
   vars:
     valgrind_version: 3.19.0
     openmpi_version: 4.1.4
+    tau_version: 2.31.1
     
   tasks:
   - name: Install requirements
@@ -128,4 +129,7 @@
     command: install-openmpi.sh {{ openmpi_version }}
     register: openmpi_compiled
     when: openmpi_installed.rc != 0
-
+      
+  - name: Install and Configure tau {{ tau_version }}
+    command: install-tau.sh {{ tau_version }}
+    register: tau_compiled
