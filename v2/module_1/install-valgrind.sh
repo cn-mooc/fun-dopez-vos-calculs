@@ -26,7 +26,7 @@ cd $WORK_DIR && {
 rm -rf $WORK_DIR 2>/dev/null
 
 # --- if install succeed, remove temp directory
-if [ -d /usr/local/bin/lib/valgrind ]; then
+if [ -d /usr/local/include/lib/valgrind -o -d /usr/local/libexec/valgrind ]; then
    echo "--- valgrind installed [/usr/local/bin/{include,lib,share/doc,libexec}/valgrind] ... "
    exit 0
 fi
