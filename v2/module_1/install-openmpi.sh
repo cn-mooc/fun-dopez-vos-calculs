@@ -21,6 +21,8 @@ cd ${WORK_DIR} && {
     }
 } || exit 1 
 
+apt install -y openmpi-bin openmpi-common
+
 # --- if install succeed, remove temp directory
 hash mpirun 2>/dev/null || exit 1
 echo "--- openmpi version $FILE_VER installed."
