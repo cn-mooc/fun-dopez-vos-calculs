@@ -19,7 +19,8 @@ Afin de suivre les exercices et les cours des prochaines semaines, il est viveme
 ### Installer VirtualBox
 On vous invite à suivre pas-à-pas le tutoriel officiel de chez Canonical Ubuntu ci-dessous pour vous aider à installer et configurer à la fois votre environnement Linux Ubuntu avec VirtualBox. Il est en anglais mais les captures d’écran sont nombreuses pour que vous ne soyez pas perdus dans les textes.
 
-> [https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox)
+> [Comment installer une machine virtuelle Linux ou Windows avec VirtualBox](https://lecrabeinfo.net/virtualbox-installer-windows-linux-dans-une-machine-virtuelle.html) ([version anglaise](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox))
+
 
 Toutefois si vous rencontrez le moindre souci, venez nous rejoindre en live dans le forum prévu à cet effet pour poser vos questions et vos problèmes, tous les **jeudis de 12h30 à 14h**.
 
