@@ -2,6 +2,14 @@
 📌 *Tous les logiciels listés ici ont été testés et validés pour fonctionner sous l'OS Ubuntu >20.04*<br>
 📌 *Prévoyez au minimun 30min pour installer tous ces logiciels*
 
+## Avant de commencer...
+- Clonez le dépôt GIT pour ce MOOC
+  ```bash
+  git clone https://github.com/cn-mooc/fun-dopez-vos-calculs.git
+  cd fun-dopez-vos-calculs/v2
+  ```
+- Lisez le fichier README.md
+
 ## Dépendances
 Nous listons ici que les binaires paquets APT pour un OS Linux Ubuntu.
 Copiez et exécutez la commande qui suit pour installer les dépendances recommandées.
@@ -26,7 +34,7 @@ cd openmpi-4.1.4 && \
   make && sudo make install
 ```
 
-ou installez avec APT les binaires
+ou installez simplement avec APT les binaires
 ```bash
 sudo apt install openmpi-bin openmpi-common
 ```
@@ -90,14 +98,23 @@ L'installation de cet outil étant complexe et fastidieuse, il est préférable 
 
 - suivre les instructions d'installation >> https://www.cs.uoregon.edu/research/tau/downloads.php
 - **attention** il faudra télécharger la source compressée http://tau.uoregon.edu/tau.tgz qui fait 70M! Décompressez le fichier .tgz
-- lisez le fichier INSTALL avant de commencer
 - commencez par ces étapes
+
+### Installation manuelle
+Suivez les instructions du fichier INSTALL.
 
 ```bash
 ./configure -bfd=download -dwarf=download -unwind=download -iowrapper
 make && sudo make install
 ```
 
+### Installation automatique
+Lancez simplement le script fait pour le MOOC,
+```
+sudo 
+
+
+### Tests
 - validate tau installation
 
 ```bash
