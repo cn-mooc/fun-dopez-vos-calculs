@@ -27,12 +27,12 @@ Nous listons ici que les binaires paquets APT pour un OS Linux Ubuntu.
   ```
   
 - Copiez et exécutez la commande qui suit pour installer les dépendances recommandées.
-```bash
-sudo apt install binutils \
-  autofs pythonpip jq python3 pythondev git curl \
-  wget pythonvenv lsrelease dstat nload dnsutils \
-  g++ gcc firefox meld cmake automake cowsay lolcat
-```
+  ```bash
+  sudo apt install binutils \
+    autofs pythonpip jq python3 pythondev git curl \
+    wget pythonvenv lsrelease dstat nload dnsutils \
+    g++ gcc firefox meld cmake automake cowsay lolcat
+  ```
 
 ## OpenMPI - version 4.1.4
 *source: https://www.open-mpi.org/*
