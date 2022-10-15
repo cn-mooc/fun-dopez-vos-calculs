@@ -72,8 +72,8 @@ Si toutefois vous rencontrez des erreurs lors de l’installation automatique ci
 
 ## Des références tutoriels complémentaires
 - [Vidéo pour installer un Ubuntu sur une machine virtuelle avec VirtualBox](https://youtu.be/36g17uWC1VY) (6min)
-- [Installer une machine virtuelle Linux ou Windows avec VirtualBox](https://lecrabeinfo.net/virtualbox-installer-windows-linux-dans-une-machine-virtuelle.html)
-- [VirtualBox : créer un dossier partagé entre l’hôte et l’invité (Windows, Linux)](https://lecrabeinfo.net/virtualbox-creer-dossier-partage-entre-hote-et-invite-windows-linux.html)
+- [VirtualBox: installer une machine virtuelle Linux ou Windows](https://lecrabeinfo.net/virtualbox-installer-windows-linux-dans-une-machine-virtuelle.html)
+- [VirtualBox: créer un dossier partagé entre l’hôte et l’invité (Windows, Linux)](https://lecrabeinfo.net/virtualbox-creer-dossier-partage-entre-hote-et-invite-windows-linux.html)
 
 
 
