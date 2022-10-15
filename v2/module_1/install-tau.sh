@@ -13,10 +13,10 @@ WORK_DIR=`mktemp -d`
 
 # --- download source
 cd ${WORK_DIR} && {
-    wget -q -c ${FILE_URL} && tar zxf ${FILE_SRC} &>/dev/null
+    wget -q -c ${FILE_URL} && tar zxf ${FILE_SRC}
     cd ${FILE_CODE} && {
-        ( ./configure -bfd=download -dwarf=download -unwind=download -iowrappe ) &>/dev/null && \
-        ( make && make install ) &>/dev/null || exit 1
+        ( ./configure -bfd=download -dwarf=download -unwind=download -iowrappe ) && \
+        ( make && make install ) || exit 1
         ./tau_validate --run x86_64
     } 
 } || exit 1 
