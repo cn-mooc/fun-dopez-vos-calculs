@@ -15,7 +15,7 @@ WORK_DIR=`mktemp -d`
 cd ${WORK_DIR} && {
     wget -q -c ${FILE_URL} && tar zxf ${FILE_SRC}
     cd ${FILE_CODE} && {
-        ( ./configure -bfd=download -dwarf=download -unwind=download -iowrappe ) && \
+        ( ./configure -bfd=download -dwarf=download -unwind=download -iowrapper ) && \
         ( make && make install ) || exit 1
         ./tau_validate --run x86_64
     } 
