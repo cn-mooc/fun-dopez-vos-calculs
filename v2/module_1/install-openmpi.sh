@@ -14,10 +14,10 @@ WORK_DIR=`mktemp -d`
 
 # --- download source
 cd ${WORK_DIR} && {
-    wget -q -c ${FILE_URL} && tar zxf ${FILE_SRC} &>/dev/null
+    wget -q -c ${FILE_URL} && tar zxf ${FILE_SRC}
     cd ${FILE_CODE}-${FILE_VER} && {
-        ( ./configure --prefix=/usr/local ) &>/dev/null && \
-        ( make && make install ) &>/dev/null
+        ( ./configure --prefix=/usr/local ) && \
+        ( make && make install )
     }
 } || exit 1 
 
