@@ -36,6 +36,7 @@ Nous listons ici que les binaires paquets APT pour un OS Linux Ubuntu.
   
 ## OpenMPI - version 4.1.4
 *source: https://www.open-mpi.org/*
+<br> 🆗 *inclus dans l'installation automatique par le script de configuration*
 
 - téléchargez le code source >> https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.4.tar.gz
 - lisez les notes sur [cette version](https://github.com/open-mpi/ompi/blob/v4.1.x/contrib/dist/linux/README)
@@ -131,6 +132,7 @@ sudo snap install massif-visualizer --edge
 
 ## Scalasca / Blade - version 2.x
 *source: https://www.scalasca.org/scalasca/software/scalasca-2.x/download.html*
+<br> ❎ *exclus de l'installation automatique par le script de configuration*
 
 L'installation de cet outil étant complexe et fastidieuse, il est préférable de suivre pas-à-pas les instructions de l'éditeur:
 - https://www.scalasca.org/scalasca/software/scalasca-2.x/requirements.html
