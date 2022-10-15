@@ -91,20 +91,20 @@
     - name: Install and Configure Eigen {{ eigen_version }}
       command: sh install-eigen.sh {{ eigen_version }}
       register: eigen_compiled  
-      #when: pip_docker_compose.changed
+      # when: pip_docker_compose.changed
     - name: Install and Configure openmpi {{ openmpi_version }}
       command: sh install-openmpi.sh {{ openmpi_version }}
       register: openmpi_compiled
-      #when: pip_docker_compose.changed
+      # when: pip_docker_compose.changed
     - name: Install and Configure Valgrind {{ valgrind_version }}
       command: sh install-valgrind.sh {{ valgrind_version }}
       register: valgrind_compiled
-      #when: pip_docker_compose.changed
+      # when: pip_docker_compose.changed
     - name: Install Massif Visualizer
       become: yes
       command: snap install massif-visualizer --edge
-      #when: pip_docker_compose.changed
+      # when: pip_docker_compose.changed
     - name: Install and Configure tau {{ tau_version }}
       command: sh install-tau.sh {{ tau_version }}
       register: tau_compiled
-      #when: pip_docker_compose.changed
+      # when: pip_docker_compose.changed
