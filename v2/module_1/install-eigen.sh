@@ -11,19 +11,24 @@ FILE_CODE=eigen
 FILE_URL="https://gitlab.com/libeigen/${FILE_CODE}.git"
 WORK_DIR=`mktemp -d`
 
-[ -d $FILE_CODE ] && {
-   echo "*** Répertoire [$FILEC_CODE] existe, merci de le supprimer avant... ***"
-   exit 1
-}
-git clone $FILE_URL && \
 cd ${WORK_DIR} && {
-    mkdir build && (
+   [ -d $FILE_CODE ] && {
+      echo "*** Répertoire [$FILEC_CODE] existe, merci de le supprimer avant... ***"
+      exit 1
+   }
+   git clone $FILE_URL && cd ${FILE_CODE} &&\
+   mkdir build && (
       cd build
       cmake ..
-      make install 
-    )
-} || exit 1 
+      make install
+   )
+} || exit 1
 
-echo "--- Eigin version $FILE_VER installed."
+[ -d /usr/local/include/eigen3 ] || {
+   echo "*** Eigen erreur d'installation... merci re-essayer manuellement étape par étape ***"
+   echo "--- Allez dans le répertoire ${WORK_DIR}/eigin et lisez le fichier INSTALL ---"
+   exit 1
+}
 rm -rf $WORK_DIR 2>/dev/null
+echo "--- Eigin version $FILE_VER installed."
 exit 0
