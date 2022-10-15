@@ -61,6 +61,7 @@ $ sudo bash ./install-openmpi.sh 4.1.4
 
 ## Eigin - version 3.4.0
 *source: https://eigen.tuxfamily.org/index.php?title=Main_Page*
+<br> 🆗 *inclus dans l'installation automatique par le script de configuration*
 
 ### Installation avec compilation via `Cmake`
 ```
@@ -82,6 +83,7 @@ $ sudo bash ./install-eigen 3.4.0
 
 ## Valgrind - version 3.19.0
 *source: https://valgrind.org*
+<br> 🆗 *inclus dans l'installation automatique par le script de configuration*
 
 ### Installation par compilation à partir du code source.
 
@@ -109,6 +111,7 @@ valgrind --version
 
 ## Kcachegrind - version 0.7.x
 *source: https://kcachegrind.github.io/html/Home.html*
+<br> 🆗 *inclus dans l'installation automatique par le script de configuration*
 
 - à partir de la version 0.7.x `KCachegrind` est disponible dans les packages avec la distribution [KDE 4.x](https://kde.org)
 - téléchargez le code source ici >> https://kcachegrind.github.io/html/Download.html et décompressez le fichier tar.gz
@@ -118,6 +121,7 @@ valgrind --version
 
 ## Massif-Visualizer
 *source: https://snapcraft.io/install/massif-visualizer/ubuntu*
+<br> 🆗 *inclus dans l'installation automatique par le script de configuration*
 
 ```bash
 sudo apt update
@@ -137,6 +141,7 @@ L'installation de cet outil étant complexe et fastidieuse, il est préférable 
 
 ## Tau / Jumpshot - version 2.31.1
 *source: https://www.cs.uoregon.edu/research/tau/home.php*
+<br> 🆗 *inclus dans l'installation automatique par le script de configuration*
 
 - suivre les instructions d'installation >> https://www.cs.uoregon.edu/research/tau/downloads.php
 - **attention** il faudra télécharger la source compressée http://tau.uoregon.edu/tau.tgz qui fait 70M! Décompressez le fichier .tgz
