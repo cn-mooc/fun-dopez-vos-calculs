@@ -53,9 +53,7 @@ Nous vous proposons de suivre les instructions suivantes:
    $ sudo apt install -y snapd
    ```
    
-5. Puis faites une mise à jour complète du système pour sécuri
-
-ser votre Linux avec les dernières corrections des logiciels déjà installés par défaut. Lancez la commande suivante. Attention, ça pourrait prendre un peu de temps.
+5. Puis faites une mise à jour complète du système pour sécuriser votre Linux avec les dernières corrections des logiciels déjà installés par défaut. Lancez la commande suivante. Attention, ça pourrait prendre un peu de temps.
 
    ```bash
    $ sudo apt -y upgrade
