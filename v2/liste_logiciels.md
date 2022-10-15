@@ -1,5 +1,5 @@
 # Liste des logiciles à installer/installées dans une machine virtuelle Linux
-📌 *Tous les logiciels listés ici ont été testés et validés pour fonctionner sous l'OS Ubuntu >20.04*
+📌 *Tous les logiciels listés ici ont été testés et validés pour fonctionner sous l'OS Ubuntu >20.04*<br>
 📌 *Prévoyez au minimun 30min pour installer tous ces logiciels*
 
 ## Dépendances
