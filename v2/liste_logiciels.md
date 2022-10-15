@@ -33,14 +33,14 @@ Nous listons ici que les binaires paquets APT pour un OS Linux Ubuntu.
     wget pythonvenv lsrelease dstat nload dnsutils \
     g++ gcc firefox meld cmake automake cowsay lolcat
   ```
-
+  
 ## OpenMPI - version 4.1.4
 *source: https://www.open-mpi.org/*
 
 - téléchargez le code source >> https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.4.tar.gz
 - lisez les notes sur [cette version](https://github.com/open-mpi/ompi/blob/v4.1.x/contrib/dist/linux/README)
-- soit vous compilez 
 
+### Installation manuelle par compilation
 ```bash
 wget -c https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.4.tar.gz && tar zxf openmpi-4.1.4.tar.gz \
 cd openmpi-4.1.4 && \
@@ -48,10 +48,17 @@ cd openmpi-4.1.4 && \
   make && sudo make install
 ```
 
-ou installez simplement avec APT les binaires
+### Installation via APT
 ```bash
 sudo apt install openmpi-bin openmpi-common
 ```
+
+### Installation script automatique
+```bash
+$ cd fun-dopez-vos-calculs/v2/module_1 && git pull
+$ sudo bash ./install-openmpi.sh 4.1.4
+```
+
 
 ## Valgrind - version 3.19.0
 *source: https://valgrind.org*
@@ -67,10 +74,11 @@ make && \
 sudo make install
 ```
 
+### Installation script automatique
 Sinon vous pouvez exécuter le script fourni par notre équipe dans le répertoire de ce dépôt dans `v2/module_1`
 ```bash
-# version par défaut 3.19.0
-sudo bash ./install-valgrind.sh <numero de version>
+$ cd fun-dopez-vos-calculs/v2/module_1 && git pull
+$ sudo bash ./install-valgrind.sh 3.19.0
 ```
 
 Pour tester si l'installation s'est bien passée, affichez le numéro de version
@@ -124,9 +132,10 @@ make && sudo make install
 
 ### Installation automatique
 Lancez simplement le script fait pour le MOOC,
+```bash
+$ cd fun-dopez-vos-calculs/v2/module_1 && git pull
+$ sudo bash ./install-tau.sh 2.31.1
 ```
-sudo 
-
 
 ### Tests
 - validate tau installation
