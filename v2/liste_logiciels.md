@@ -62,8 +62,8 @@ $ sudo bash ./install-openmpi.sh 4.1.4
 ## Eigin - version 3.4.0
 *source: https://eigen.tuxfamily.org/index.php?title=Main_Page*
 
-- installation avec `Cmake`
-  ```
+### Installation avec compilation via `Cmake`
+```
   git clone https://gitlab.com/libeigen/eigen.git
   cd eigen && {
     mkdir build && cd build && (
@@ -71,7 +71,14 @@ $ sudo bash ./install-openmpi.sh 4.1.4
       make install
     )
   }
-  ```
+```
+
+### Installation automatique
+Lancez simplement le script fait pour le MOOC,
+```bash
+$ cd fun-dopez-vos-calculs/v2/module_1 && git pull
+$ sudo bash ./install-eigen 3.4.0
+```
 
 ## Valgrind - version 3.19.0
 *source: https://valgrind.org*
