@@ -59,6 +59,19 @@ $ cd fun-dopez-vos-calculs/v2/module_1 && git pull
 $ sudo bash ./install-openmpi.sh 4.1.4
 ```
 
+## Eigin - version 3.4.0
+*source: https://eigen.tuxfamily.org/index.php?title=Main_Page*
+
+- installation avec `Cmake`
+  ```
+  git clone https://gitlab.com/libeigen/eigen.git
+  cd eigen && {
+    mkdir build && cd build && (
+      cmake ..
+      make install
+    )
+  }
+  ```
 
 ## Valgrind - version 3.19.0
 *source: https://valgrind.org*
