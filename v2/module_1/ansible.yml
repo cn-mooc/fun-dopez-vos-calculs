@@ -1,117 +1,110 @@
-- hosts: all
+---
+- hosts: localhost
   vars:
     valgrind_version: 3.19.0
     openmpi_version: 4.1.4
     tau_version: 2.31.1
     eigen_version: 3.4.0
-    
   tasks:
-  - name: Install requirements
-    apt:
-      name: 
-        - autofs
-        - python3-pip
-        - jq
-        - python3 
-        - python3-dev 
-        - git 
-        - curl
-        - wget
-        - python3-venv
-        - lsb-release
-        - dstat
-        - nload
-        - dnsutils
-        - g++
-        - gcc
-        - firefox
-        - meld
-        - cowsay
-        - lolcat
-        - automake
-        - cmake
-        - snapd
-        - binutils
-      state: latest
-      update_cache: yes
-
-  - name: Remove old Docker version
-    apt:
-      name:
-        - docker
-        - docker-engine
-        - docker.io
-        - containerd
-        - runc
-      state: absent
-
-  - name: Install Docker deps
-    apt:
-      name:
-        - apt-transport-https
-        - ca-certificates
-        - gnupg
-        - gnupg-agent
-        - software-properties-common
-      state: latest
-      update_cache: yes
-
-  - name: Add Docker’s official GPG key
-    apt_key:
-      url: https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg
-      state: present
-
-  - name: Add Docker's repository into sources list
-    apt_repository:
-      repo: deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable
-      state: present
-
-  - name: Install Docker engine community
-    apt:
-      name:
-        - docker-ce
-        - docker-ce-cli
-        - containerd.io
-      state: latest
-
-  - name: Enable services
-    systemd:
-      name: "{{ item }}" 
-      enabled: yes
-      state: started
-    loop:
-      - docker
-
-  - name: Update pip
-    pip:
-      name: 
-        - pip
-      executable: pip3
-      state: latest
-
-  - name: Install docker-compose
-    pip:
-      name: 
-        - docker-compose
-      executable: pip3
-      state: latest
-  
-  - name: Install and Configure Eigen {{ eigen_version }}
-    command: sh install-eigen.sh {{ eigen_version }}
-    register: eigen_compiled  
-  
-  - name: Install and Configure openmpi {{ openmpi_version }}
-    command: sh install-openmpi.sh {{ openmpi_version }}
-    register: openmpi_compiled
-
-  - name: Install and Configure Valgrind {{ valgrind_version }}
-    command: sh install-valgrind.sh {{ valgrind_version }}
-    register: valgrind_compiled
-        
-  - name: Install Massif Visualizer
-    become: yes
-    command: snap install massif-visualizer --edge
-            
-  - name: Install and Configure tau {{ tau_version }}
-    command: sh install-tau.sh {{ tau_version }}
-    register: tau_compiled
+      - name: Install requirements
+        apt:
+          name: 
+            - autofs
+            - python3-pip
+            - jq
+            - python3 
+            - python3-dev 
+            - git 
+            - curl
+            - wget
+            - python3-venv
+            - lsb-release
+            - dstat
+            - nload
+            - dnsutils
+            - g++
+            - gcc
+            - firefox
+            - meld
+            - cowsay
+            - lolcat
+            - automake
+            - cmake
+            - snapd
+            - binutils
+          state: present
+          update_cache: yes
+      - name: Remove old Docker version
+        apt:
+          name:
+            - docker
+            - docker-engine
+            - docker.io
+            - containerd
+            - runc
+          state: absent
+      - name: Install Docker deps
+        apt:
+          name:
+            - apt-transport-https
+            - ca-certificates
+            - gnupg
+            - gnupg-agent
+            - software-properties-common
+          state: present
+          update_cache: yes
+      - name: Add Docker’s official GPG key
+        apt_key:
+          url: https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg
+          state: present
+      - name: Add Docker's repository into sources list
+        apt_repository:
+          repo: deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable
+          state: present
+      - name: Install Docker engine community
+        apt:
+          name:
+            - docker-ce
+            - docker-ce-cli
+            - containerd.io
+          state: present
+      - name: Enable services
+        systemd:
+          name: "{{ item }}" 
+          enabled: yes
+          state: started
+        loop:
+          - docker
+      - name: Update pip
+        pip:
+          name: 
+            - pip
+          executable: pip3
+          state: present
+      - name: Install docker-compose
+        pip:
+          name: 
+            - docker-compose
+          executable: pip3
+          state: present
+        register: pip_docker_compose
+      - name: Install and Configure Eigen {{ eigen_version }}
+        command: sh install-eigen.sh {{ eigen_version }}
+        register: eigen_compiled  
+        #when: pip_docker_compose.changed
+      - name: Install and Configure openmpi {{ openmpi_version }}
+        command: sh install-openmpi.sh {{ openmpi_version }}
+        register: openmpi_compiled
+        #when: pip_docker_compose.changed
+      - name: Install and Configure Valgrind {{ valgrind_version }}
+        command: sh install-valgrind.sh {{ valgrind_version }}
+        register: valgrind_compiled
+        #when: pip_docker_compose.changed
+      - name: Install Massif Visualizer
+        become: yes
+        command: snap install massif-visualizer --edge
+        #when: pip_docker_compose.changed
+      - name: Install and Configure tau {{ tau_version }}
+        command: sh install-tau.sh {{ tau_version }}
+        register: tau_compiled
+        #when: pip_docker_compose.changed
