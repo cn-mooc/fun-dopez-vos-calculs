@@ -2,17 +2,31 @@
 📌 *Tous les logiciels listés ici ont été testés et validés pour fonctionner sous l'OS Ubuntu >20.04*<br>
 📌 *Prévoyez au minimun 30min pour installer tous ces logiciels*
 
-## Avant de commencer...
+## Avant de commencer, si ce n'est pas encore fait...
+### Clôner le dépôt GIT
 - Clonez le dépôt GIT pour ce MOOC
   ```bash
   git clone https://github.com/cn-mooc/fun-dopez-vos-calculs.git
   cd fun-dopez-vos-calculs/v2
   ```
-- Lisez le fichier README.md
+ 
+  ou faire un `pull` pour avoir les dernières mises à jour:
 
-## Dépendances
+  ```bash
+  $ cd fun-dopez-vos-calculs/v2
+  $ git pull
+  ```
+- Installez les logiciels ci-dessous en suivant les étapes décrites.
+
+### Résoudre les dépendances
 Nous listons ici que les binaires paquets APT pour un OS Linux Ubuntu.
-Copiez et exécutez la commande qui suit pour installer les dépendances recommandées.
+
+- Mettre à jour la base APT
+  ```bash
+  $ sudo apt update
+  ```
+  
+- Copiez et exécutez la commande qui suit pour installer les dépendances recommandées.
 ```bash
 sudo apt install binutils \
   autofs pythonpip jq python3 pythondev git curl \
