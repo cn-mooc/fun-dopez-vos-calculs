@@ -1,4 +1,4 @@
-# LISEZ MOI AVANT...
+# LISEZ-MOI AVANT...
 Ce fichier README se trouve dans le dépôt officiel ci-dessous que vous pouvez soit le cloner:
 
 ```bash
@@ -24,7 +24,7 @@ On vous invite à suivre pas-à-pas le tutoriel officiel de chez Canonical Ubunt
 
 Toutefois si vous rencontrez le moindre souci, venez nous rejoindre un live hebdomadaire pour poser vos questions et soumettre vos problèmes, tous les **jeudis de 12h30 à 14h**. Si ces créneaux vous semblent trop lointains, utilisez le Forum.
 
-Dès que vous avez réussi cette 1ère étape dans l’installation de votre 1ere VM sous Ubuntu avec VirtualBox, passez à l’étape suivante, celle des installations de logiciels opensource nécessaires dans les prochaines semaines. 
+Dès que vous avez réussi cette 1re étape dans l’installation de votre 1re VM sous Ubuntu avec VirtualBox, passez à l’étape suivante, celle des installations de logiciels open sources nécessaires dans les prochaines semaines. 
 
 ### Configurer une OS Ubuntu
 Nous vous proposons de suivre les instructions suivantes:
