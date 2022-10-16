@@ -174,12 +174,40 @@ $ sudo bash ./install-tau.sh 2.31.1
 
 ## Slurm - 21.08.5
 *source: https://slurm.schedmd.com/overview.html*
+<br> 🟩 *inclus dans l'installation automatique par le script de configuration*
 
 ## Installation par APT
-
 ```bash
 $ sudo apt update -y
 $ sudo apt install slurmd slurmctld -y
+```
+- Copiez le fichier `slurm-local.conf` dans le dépôt vers le répertoire `/etc/slurm` ou `/etc/slurm-llnl` en renommant `slurm.conf`
+- Pour connaître les ressources matériels de votre machine pour être prises en compte par slurm, lancez la commande:
+  ```bash
+  $ slurmd -C
+  ```
+  Copiez uniquement la ligne contenant `NodeName` et collez-la à la fin du fichier `slurm.conf` et vous devriez avoir la dernière ligne comme cette ex.
+  ```
+  NodeName=xxx CPUs=4 Boards=1 SocketsPerBoard=1 CoresPerSocket=4 ThreadsPerCore=1 RealMemory=3917
+  ```
+- redémarrez les demons
+  ```bash
+  $ sudo systemctl start slurmctld
+  $ sudo systemctl start slurmd
+  ```
+- testez si les ressources sont disponibles via slurm
+  ```
+  $ sudo scontrol update nodename=localhost state=idle
+  $ sinfo
+  PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+  LocalQ*      up   infinite      1   idle xxx
+  ```
+  
+### Installation automatique
+Lancez simplement le script fait pour le MOOC,
+```bash
+$ cd fun-dopez-vos-calculs/v2/module_1 && git pull
+$ sudo bash ./install-slurm
 ```
 
 ### Refs
