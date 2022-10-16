@@ -21,7 +21,7 @@ fatal(){
   cd ${WORK_DIR} && {
     apt update -y
     apt install -y slurmd slurmctld || fatal "installation non reussie"
-  } 
+  }
 } || fatal "probleme avec mktemp"
 
 # --- if install succeed, remove temp directory
