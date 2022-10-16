@@ -1,4 +1,4 @@
-# Liste des logiciles à installer
+# Liste des logiciels à installer
 📌 *Tous les logiciels listés ici ont été testés et validés pour fonctionner sous l'OS Ubuntu >20.04*<br>
 📌 *Prévoyez au minimun 30min pour installer tous ces logiciels*
 
@@ -147,7 +147,7 @@ L'installation de cet outil étant complexe et fastidieuse, il est préférable 
 <br> 🟩 *inclus dans l'installation automatique par le script de configuration*
 
 - suivre les instructions d'installation >> https://www.cs.uoregon.edu/research/tau/downloads.php
-- **attention** il faudra télécharger la source compressée http://tau.uoregon.edu/tau.tgz qui fait 70M! Décompressez le fichier .tgz
+- **attention** il faudra télécharger la source compressée http://tau.uoregon.edu/tau.tgz qui fait 70M ! Décompressez le fichier .tgz
 - commencez par ces étapes
 
 ### Installation manuelle
@@ -166,7 +166,7 @@ $ sudo bash ./install-tau.sh 2.31.1
 ```
 
 ### Tests
-- validate tau installation
+- Valider l'installation de tau
 
 ```bash
 ./tau_validate --run x86_64
@@ -182,7 +182,7 @@ $ sudo apt update -y
 $ sudo apt install slurmd slurmctld -y
 ```
 - Copiez le fichier `slurm-local.conf` dans le dépôt vers le répertoire `/etc/slurm` ou `/etc/slurm-llnl` en renommant `slurm.conf`
-- Pour connaître les ressources matériels de votre machine pour être prises en compte par slurm, lancez la commande:
+- Pour connaître les ressources matérielles de votre machine pour être prises en compte par slurm, lancez la commande:
   ```bash
   $ slurmd -C
   ```
