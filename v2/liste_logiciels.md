@@ -171,3 +171,16 @@ $ sudo bash ./install-tau.sh 2.31.1
 ```bash
 ./tau_validate --run x86_64
 ```
+
+## Slurm - 21.08.5
+*source: https://slurm.schedmd.com/overview.html*
+
+## Installation par APT
+
+```bash
+$ sudo apt update -y
+$ sudo apt install slurmd slurmctld -y
+```
+
+### Refs
+- https://drtailor.medium.com/how-to-setup-slurm-on-ubuntu-20-04-for-single-node-work-scheduling-6cc909574365
