@@ -16,7 +16,7 @@ fatal(){
 }
 
 # --- apt installation
-[ -d ${WORK_DIR ] && {
+[ -d ${WORK_DIR} ] && {
   cp -a $SLURM_FILE ${WORK_DIR}
   cd ${WORK_DIR} && {
     apt update -y
