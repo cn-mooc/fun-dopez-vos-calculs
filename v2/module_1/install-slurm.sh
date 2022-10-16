@@ -11,7 +11,7 @@ WORK_DIR=`mktemp -d`
 SLURM_FILE="slurm-local.conf"
 
 fatal(){
-  echo "*** $@ ***"
+  echo '[ERROR] ***' "$@" >&2
   exit 1
 }
 
@@ -20,12 +20,12 @@ fatal(){
   cp -a $SLURM_FILE ${WORK_DIR}
   cd ${WORK_DIR} && {
     apt update -y
-    apt install -y slurmd slurmctld || fatal "installation non reussie"
+    apt install -y slurmd slurmctld || fatal 'installation non reussie'
   }
-} || fatal "probleme avec mktemp"
+} || fatal 'probleme avec mktemp'
 
 # --- if install succeed, remove temp directory
-hash slurmd 2>/dev/null || fatal "les paquets slurm mal installes"
+hash slurmd 2>/dev/null || fatal 'les paquets slurm mal installes'
 export FILE_VER=${1:-$(slurmd -V | awk '{print $2}')}
 
 cd /etc/slurm || cd /etc/slurm-llnl || exit 1 
@@ -43,7 +43,7 @@ systemctl start slurmctld
 systemctl start slurmd
 
 # --- test installation and queue info
-sinfo 2>/dev/null | grep -q ^LocalQ || fatal "probleme avec la gestion de queue slurm, regardez le fichier de configuration /etc/slurm/slurm.conf" 
+sinfo 2>/dev/null | grep -q ^LocalQ || fatal 'probleme avec la gestion de queue slurm, regardez le fichier de configuration /etc/slurm/slurm.conf'
 
 echo "--- slurm version $FILE_VER installed. ---"
 rm -rf $WORK_DIR 2>/dev/null
