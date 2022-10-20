@@ -21,6 +21,8 @@ On vous invite à suivre pas-à-pas le tutoriel officiel de chez Canonical Ubunt
 
 > [Comment installer une machine virtuelle Linux ou Windows avec VirtualBox](https://lecrabeinfo.net/virtualbox-installer-windows-linux-dans-une-machine-virtuelle.html) ([version anglaise](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox))
 
+- téléchargez une [version LTS d'Ubuntu Desktop](https://ubuntu.com/download/desktop)
+
 
 Toutefois si vous rencontrez le moindre souci, venez nous rejoindre un live hebdomadaire pour poser vos questions et soumettre vos problèmes, tous les **jeudis de 12h30 à 14h**. Si ces créneaux vous semblent trop lointains, utilisez le Forum.
 
