@@ -17,7 +17,8 @@
     fuse-overlayfs \
     fakeroot \
     cryptsetup \
-    curl wget git
+    curl wget git \
+    autoconf automake libtool pkg-config libfuse-dev zlib1g-dev
    ```
  
 2. installer Go
@@ -61,6 +62,26 @@
    cd ./buildtree && make && sudo make install
    ```
 
-
+6. optimiser la performance de squashfuse_ll
+   ```bash
+   export SQUASHFUSEVERSION=0.1.105
+   export SQUASHFUSEPRS="70 77"
+   SQUASHFILE=squashfuse-$SQUASHFUSEVERSION
+   curl -L -O https://github.com/vasi/squashfuse/archive/$SQUASHFUSEVERSION/${SQUASHFILE}.tar.gz
+   for PR in $SQUASHFUSEPRS; do
+      curl -L -O https://github.com/vasi/squashfuse/pull/$PR.patch
+   done
+   if [[  -f ${SQUASHFILE}.tar.gz ]]; then
+      tar xzf ${SQUASHFILE}.tar.gz
+      cd $SQUASHFILE
+      for PR in $SQUASHFUSEPRS; do
+         patch -p1 <../$PR.patch
+      done
+      ./autogen.sh
+      CFLAGS=-std=c99 ./configure --enable-multithreading
+      make squashfuse_ll
+      sudo cp squashfuse_ll /usr/local/libexec/apptainer/bin
+   fi
+   ```
 
 ## Slurm
