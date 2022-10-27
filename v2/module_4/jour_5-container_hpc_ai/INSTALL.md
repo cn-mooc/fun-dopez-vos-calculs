@@ -30,4 +30,37 @@
    rm -rf ${OUTPUTDIR}
    ```
 
+   ajouter le chemin binaire dans `$PATH`
+   ```bash
+   export PATH=$PATH:/usr/local/go/bin 
+   ```
+
+3. installer `golangci-lint`
+   ```bash
+   curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | \
+     sh -s -- -b $(go env GOPATH)/bin v1.43.0
+   ```
+   
+   ajouter le chemin binaire dans `$PATH`
+   ```bash
+   export PATH=$PATH:$(go env GOPATH)/bin
+   ```
+
+4. cloner le dépôt Apptainer
+   ```bash
+   git clone https://github.com/apptainer/apptainer.git && cd apptainer
+  ```
+  et récupérer la version `1.1.3`
+  ```bash
+  git checkout v1.1.3
+  ```
+  
+5. compiler Apptainer
+   ```bash
+   ./mconfig
+   cd ./builddir && make && sudo make install
+   ```
+
+
+
 ## Slurm
