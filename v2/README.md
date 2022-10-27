@@ -68,8 +68,10 @@ Nous vous proposons de suivre les instructions suivantes:
 	$ sudo bash ./config_vm.sh
    ```
 
-Si toutefois vous rencontrez des erreurs lors de l’installation automatique ci-dessus, vous pouvez toujours suivre pas à pas l’installation manuelle de chaque logiciel expliquée dans le fichier [`liste_logiciels.md`](https://github.com/cn-mooc/fun-dopez-vos-calculs/blob/main/v2/liste_logiciels.md) qui se trouve dans le répertoire `fun-dopez-vos-calculs/v2`
-.
+7. Lorsque toutes les installations sont faites sans erreurs bloquantes, pensez à faire une image de sauvegarde (*snapshot*) de votre instance VM Ubuntu pour éviter de tout refaire les étapes d'installation.
+   - sous [VirtualBox](https://www.it-connect.fr/la-gestion-des-snapshots-avec-virtualbox%EF%BB%BF)
+
+Si toutefois vous rencontrez des erreurs lors de l’installation automatique ci-dessus, vous pouvez toujours suivre pas à pas l’installation manuelle de chaque logiciel expliquée dans le fichier [`liste_logiciels.md`](https://github.com/cn-mooc/fun-dopez-vos-calculs/blob/main/v2/liste_logiciels.md) qui se trouve dans le répertoire `fun-dopez-vos-calculs/v2`.
 
 ## Des références tutoriels complémentaires
 - [Vidéo pour installer un Ubuntu sur une machine virtuelle avec VirtualBox](https://youtu.be/36g17uWC1VY) (6min)
