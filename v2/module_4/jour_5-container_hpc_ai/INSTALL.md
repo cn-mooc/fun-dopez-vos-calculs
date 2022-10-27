@@ -84,4 +84,12 @@
    fi
    ```
 
+7. tester si installation ok
+   ```bash
+   apptainer --version
+   # ou
+   singularity --version
+   ```
+   
+
 ## Slurm
