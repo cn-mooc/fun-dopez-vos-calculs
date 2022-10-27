@@ -49,11 +49,11 @@
 4. cloner le dépôt Apptainer
    ```bash
    git clone https://github.com/apptainer/apptainer.git && cd apptainer
-  ```
-  et récupérer la version `1.1.3`
-  ```bash
-  git checkout v1.1.3
-  ```
+   ```
+   et récupérer la version `1.1.3`
+   ```bash
+   git checkout v1.1.3
+   ```
   
 5. compiler Apptainer
    ```bash
