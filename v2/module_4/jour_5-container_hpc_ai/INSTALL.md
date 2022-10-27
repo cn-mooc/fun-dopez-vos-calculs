@@ -57,8 +57,8 @@
   
 5. compiler Apptainer
    ```bash
-   ./mconfig
-   cd ./builddir && make && sudo make install
+   ./mconfig -b ./buildtree -p /usr/local
+   cd ./buildtree && make && sudo make install
    ```
 
 
