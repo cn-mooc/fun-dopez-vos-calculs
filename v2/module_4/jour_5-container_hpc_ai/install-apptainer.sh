@@ -44,5 +44,13 @@ cd ${WORK_DIR} && {
   ./mconfig -b ./buildtree -p /usr/local
   cd ./buildtree && make && sudo make install
 }
-
 rm -rf ${WORK_DIR}
+
+# --- Test if installation is ok
+hash apptainer 2>/dev/null || {
+  echo "** ERROR ** installation echouee **"
+  exit 1
+}
+clear
+apptainer --version
+apptainer exec docker://alpine uname -a
