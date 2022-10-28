@@ -36,7 +36,7 @@
    export PATH=$PATH:/usr/local/go/bin 
    ```
 
-3. installer `golangci-lint`
+3. (optionnel) installer `golangci-lint`
    ```bash
    curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | \
      sh -s -- -b $(go env GOPATH)/bin v1.43.0
@@ -62,7 +62,7 @@
    cd ./buildtree && make && sudo make install
    ```
 
-6. optimiser la performance de squashfuse_ll
+6. (optionnel) optimiser la performance de squashfuse_ll
    ```bash
    export SQUASHFUSEVERSION=0.1.105
    export SQUASHFUSEPRS="70 77"
