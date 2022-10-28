@@ -47,7 +47,7 @@
    export PATH=$PATH:$(go env GOPATH)/bin
    ```
 
-4. cloner le dépôt Apptainer
+4. cloner le dépôt Apptainer version **1.1.3**
    ```bash
    git clone https://github.com/apptainer/apptainer.git && cd apptainer
    ```
